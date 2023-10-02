@@ -1,0 +1,52 @@
+{
+  "superheroes" : [
+
+
+  {
+      "id" : 1,
+      "name": "Wade",
+      "superName": "Deadpool",
+      "profession": "Street fighter",
+      "age": 28,
+      "canFly": true,
+      "image": "https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/02/1484222978-deadpool.jpg?crop=0.7506666666666666xw:1xh;center,top&resize=1200:*"
+  },
+  {
+      "id": 2,
+      "name": "Bruce",
+      "superName": "Hulk",
+      "profession": "Doctore",
+      "age": 50,
+      "canFly": false,
+      "image":  "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2018%2F03%2Fthe-hulk-2000.jpg&q=60"    
+  },
+  {
+      "id": 3,
+      "name": "Steve",
+      "superName": "Captain America",
+      "profession": "Solder",
+      "age": 120,
+      "canFly": false,
+      "image" : "https://w0.peakpx.com/wallpaper/704/521/HD-wallpaper-captain-america-disney-captain-america-superheroes.jpg"
+  },
+  {
+      "id": 4,
+      "name": "Tony",
+      "superName": "Iron Man",
+      "profession": "Business man",
+      "age": 45,
+      "canFly": true,
+      "image" : "https://images.hdqwalls.com/download/spectacular-iron-man-4k-yp-1920x1080.jpg"
+  },
+  {
+      "id": 5,
+      "name": "Peter",
+      "superName": "Spider Man",
+      "profession": "Student",
+      "age": 21,
+      "canFly": true,
+      "image" : "https://steamuserimages-a.akamaihd.net/ugc/949586755958057478/E5ABE21066BEDCBA9811E5E6662BECA8E521F185/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+  }
+]
+
+}
