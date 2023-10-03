@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
-import SuperheroList from './components/SuperheroList'
-import Randomsuperhero from './components/RandomSuperhero';
-
-
+import RandomSuperhero from './components/RandomSuperhero';
 
 
 function App() {
   const [superheroes, setSuperheroes] = useState([]);
+  
 
   useEffect(() => {
     // GET request to fetch superhero data
@@ -21,16 +19,18 @@ function App() {
       });
   }, []);
 
+
+
   return (
     <>
-    <div>
-      <Header/>
-      <SuperheroList superheroes = {superheroes}/>
-      <Randomsuperhero superheroes = {superheroes}/>
-    </div>
-      
+      <div className="App">
+        <Header />
+        <RandomSuperhero superheroes={superheroes} />
+        <RandomSuperhero superheroes={superheroes} />
+        
+      </div>
     </>
-  )
+  );
 }
 
 export default App
