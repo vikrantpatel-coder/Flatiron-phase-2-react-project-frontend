@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <>
         <header>
-            <h1>My SuperHERO</h1>
+            <h1>SuperHERO Battle Ground</h1>
             <nav>
                 
             </nav>

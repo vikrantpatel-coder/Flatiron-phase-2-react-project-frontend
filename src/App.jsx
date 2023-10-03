@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import SuperheroList from './components/SuperheroList'
-import RandomSuperhero from './components/RandomSuperhero';
+import Randomsuperhero from './components/RandomSuperhero';
 
 
 
@@ -26,7 +26,7 @@ function App() {
     <div>
       <Header/>
       <SuperheroList superheroes = {superheroes}/>
-      <RandomSuperhero superheroes = {superheroes}/>
+      <Randomsuperhero superheroes = {superheroes}/>
     </div>
       
     </>
