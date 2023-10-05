@@ -5,6 +5,7 @@ import ComparePowerstats from "./ComparePowerstats";
 const RandomSuperhero = ({ superheroes }) => {
   const [randomHero1, setRandomHero1] = useState(null);
   const [randomHero2, setRandomHero2] = useState(null);
+  
 
 
   useEffect(() => {
@@ -21,10 +22,9 @@ const RandomSuperhero = ({ superheroes }) => {
 
     setRandomHero1(randomSuperhero1);
     setRandomHero2(randomSuperhero2);
-
-
   };
 
+  
   return (
     <div>
       <div>

@@ -1,9 +1,0 @@
-import React, { useState } from 'react';
-
-function SuperheroForm() {
-    const [formData, setFormData] = useState({
-      name: 'Flatiron',
-      publisher: 'Project React',
-    
-    });
-}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import RandomSuperhero from './components/RandomSuperhero';
 import './App.css'
+import SuperheroForm from './components/SuperheroForm';
 
 
 
@@ -23,6 +24,10 @@ function App() {
       });
   }, []);
 
+  const addSuperhero = (newSuperhero) => {
+    setSuperheroes([...superheroes, newSuperhero])
+  }
+
   const handlePublisherChange = (publisher) => {
     if (publisher === "") {
       
@@ -40,6 +45,10 @@ function App() {
       <div className="App">
         <Header superheroes={filteredSuperheroes} onPublisherChange={handlePublisherChange} />
         <RandomSuperhero superheroes={filteredSuperheroes}   /> 
+        <SuperheroForm OnSuperheroSubmit = {addSuperhero}
+        />
+      
+     
 
       </div>
     </>
