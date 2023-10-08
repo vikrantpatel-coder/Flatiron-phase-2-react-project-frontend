@@ -14,6 +14,9 @@ technology like the current generation does. We would play many board games and 
 Superhero, pokémon, and wrestling card games were some of my favorites. This project reflects the same idea of
 playing cards where you shuffle, deploy, and compare the power and most powerful character wins.
 
+Feature Scope:
+Filter by: Gender, Alignment, Publisher
+
 References:
 
 Sum up the value to compare powerstats:
