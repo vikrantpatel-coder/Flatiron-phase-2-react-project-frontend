@@ -15,6 +15,9 @@ const ComparePowerstats = ({ randomHero1, randomHero2 }) => {
     const totalDifference1 = Object.values(stats1).reduce((sum, value) => sum + parseInt(value), 0);
     const totalDifference2 = Object.values(stats2).reduce((sum, value) => sum + parseInt(value), 0);
 
+    
+    
+    //decision whether to declare win or tie
     if (totalDifference1 > totalDifference2) {
       return `${randomHero1.name} WINS!`;
     } else if (totalDifference2 > totalDifference1) {
