@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import ComparePowerstats from "./ComparePowerstats";
+import Button from "./Button.styles"
+import Card from "./Card.styles";
 
 
 const RandomSuperhero = ({ superheroes }) => {
   const [randomHero1, setRandomHero1] = useState(null);
   const [randomHero2, setRandomHero2] = useState(null);
-  
-
 
   useEffect(() => {
     // Generates two random superheroes
@@ -33,6 +33,7 @@ const RandomSuperhero = ({ superheroes }) => {
 
         {randomHero1 ? (
           <div>
+            <Card>
             <h4>{randomHero1.name}</h4>
             <img src={randomHero1.images.md} alt={randomHero1.name} />
             <p>Intelligence: {randomHero1.powerstats.intelligence}</p>
@@ -41,6 +42,7 @@ const RandomSuperhero = ({ superheroes }) => {
             <p>Durability: {randomHero1.powerstats.durability}</p>
             <p>Power: {randomHero1.powerstats.power}</p>
             <p>Combat: {randomHero1.powerstats.combat}</p>
+            </Card>
           </div>
         ) : (
           <p>Loading Superhero 1...</p>
@@ -51,6 +53,8 @@ const RandomSuperhero = ({ superheroes }) => {
       <div>
         {randomHero2 ? (
           <div>
+            <Card>
+
             <h4>{randomHero2.name}</h4>
             <img src={randomHero2.images.md} alt={randomHero2.name} />
             <p>Intelligence: {randomHero2.powerstats.intelligence}</p>
@@ -59,13 +63,16 @@ const RandomSuperhero = ({ superheroes }) => {
             <p>Durability: {randomHero2.powerstats.durability}</p>
             <p>Power: {randomHero2.powerstats.power}</p>
             <p>Combat: {randomHero2.powerstats.combat}</p>
+            </Card>
           </div>
         ) : (
           <p>Loading Superhero 2...</p>
         )}
+        
       </div>
-      <button onClick={generateRandomSuperheroes}>Let The War Begin..!</button>
+      <Button onClick={generateRandomSuperheroes}>Let The War Begin..!</Button>
       <ComparePowerstats randomHero1={randomHero1} randomHero2={randomHero2} />
+      
     </div>
   );
 };

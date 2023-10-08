@@ -1,8 +1,10 @@
 import React from 'react';
+import Card from './Card.styles';
 
 function About() {
   return (
     <div>
+      <Card>
       <h2>About Page</h2>
       <p>Project SuperHERO</p>
       <p>This project is inspired by my childhood memories. Back then we did not have much access to
@@ -16,6 +18,7 @@ function About() {
                 <a href="vikrantpatel-coder/Flatiron-phase-2-react-project-frontend">GitHub</a>
                 <a href="https://www.linkedin.com/in/vikrant-patel/">LinkedIn</a>
             </div>
+            </Card>
     </div>
   );
 }

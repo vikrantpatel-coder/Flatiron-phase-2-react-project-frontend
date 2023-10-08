@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Card from './Card.styles';
+import Button from './Button.styles';
 
 function SuperheroForm(props) {
 const [newSuperhero, setNewSuperhero] = useState({
@@ -52,6 +54,7 @@ const handleSubmit = (event) => {
 
 return (
   <div>
+    <Card>
   <h2>Request Your Superhero Below :</h2>
        
 <form onSubmit={handleSubmit}>
@@ -127,8 +130,9 @@ return (
       onChange={handleInputChange}
     />
   </label>
-  <button type="submit">Create Superhero</button>
+  <Button type="submit">Create Superhero</Button>
 </form>
+</Card>
 </div>
 
 )
