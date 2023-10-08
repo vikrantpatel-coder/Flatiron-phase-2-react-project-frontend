@@ -88,7 +88,7 @@ const Div = styled.div
       letter-spacing: 0;
     }
     
-  }
+  
 
 `
 

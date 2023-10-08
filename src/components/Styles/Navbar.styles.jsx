@@ -6,9 +6,9 @@ import styled from 'styled-components';
 
 
 const NavLink = styled(Link)`
-  margin-right: 20px; /* Adjust spacing between navigation links */
+  margin-right: 20px; 
   font-size: 18px;
-  color: #fff; /* Text color for navigation links */
+  color: #fff; 
   text-decoration: none;
   cursor: pointer;
 
@@ -17,7 +17,7 @@ const NavLink = styled(Link)`
   }
 
   &:hover {
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
   }
 `;
 export default NavLink;
