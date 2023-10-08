@@ -26,7 +26,9 @@ const RandomSuperhero = ({ superheroes }) => {
 
   
   return (
+    
     <div>
+      <h3>Superhero 1</h3>
       <div>
 
         {randomHero1 ? (

@@ -9,6 +9,7 @@ const [newSuperhero, setNewSuperhero] = useState({
   durability: "",
   power: "",
   combat: "",
+  images: "",
 });
 
 const handleInputChange = (event) => {
@@ -41,6 +42,7 @@ const handleSubmit = (event) => {
         durability: "",
         power: "",
         combat: "",
+        images: "",
       });
     })
     .catch((error) => {
@@ -49,6 +51,9 @@ const handleSubmit = (event) => {
 };
 
 return (
+  <div>
+  <h2>Request Your Superhero Below :</h2>
+       
 <form onSubmit={handleSubmit}>
   <label>
     Name:
@@ -113,8 +118,18 @@ return (
       onChange={handleInputChange}
     />
   </label>
+  <label>
+  Image Link:
+    <input
+      type="text"
+      combat="image"
+      value={newSuperhero.images.md}
+      onChange={handleInputChange}
+    />
+  </label>
   <button type="submit">Create Superhero</button>
 </form>
+</div>
 
 )
 }
