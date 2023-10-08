@@ -1,13 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavLink from './Styles/Navbar.styles';
+import NavContainer from './Styles/NavContainer.styles';
+
+
 
 function Navbar() {
   return (
-    <nav>
-          <Link to="/">Home</Link>
-          <Link to="/AddSuperhero">Request Superhero</Link>
-          <Link to="/about">About</Link>
-    </nav>
+    
+    <NavContainer>
+      
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/AddSuperhero">Request Superhero</NavLink>
+          <NavLink to="/about">About</NavLink>
+          
+    </NavContainer>
   );
 }
 

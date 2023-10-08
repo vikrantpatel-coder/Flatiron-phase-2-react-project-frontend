@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ComparePowerstats from "./ComparePowerstats";
-import Button from "./Button.styles"
-import Card from "./Card.styles";
-
+import Button from "./Styles/Button.styles"
+import Card from "./Styles/Card.styles";
+import StyledImage from "./Styles/Image.styles";
 
 const RandomSuperhero = ({ superheroes }) => {
   const [randomHero1, setRandomHero1] = useState(null);
@@ -28,14 +28,14 @@ const RandomSuperhero = ({ superheroes }) => {
   return (
     
     <div>
-      <h3>Superhero 1</h3>
+      <h3>SUPERHERO 1</h3>
       <div>
 
         {randomHero1 ? (
           <div>
             <Card>
             <h4>{randomHero1.name}</h4>
-            <img src={randomHero1.images.md} alt={randomHero1.name} />
+            <StyledImage src={randomHero1.images.md} alt={randomHero1.name} />
             <p>Intelligence: {randomHero1.powerstats.intelligence}</p>
             <p>Strength: {randomHero1.powerstats.strength}</p>
             <p>Speed: {randomHero1.powerstats.speed}</p>
@@ -49,14 +49,14 @@ const RandomSuperhero = ({ superheroes }) => {
         )}
       </div>
 
-      <h3>Superhero 2</h3>
+      <h3>SUPERHERO 2</h3>
       <div>
         {randomHero2 ? (
           <div>
             <Card>
 
             <h4>{randomHero2.name}</h4>
-            <img src={randomHero2.images.md} alt={randomHero2.name} />
+            <StyledImage src={randomHero2.images.md} alt={randomHero2.name} />
             <p>Intelligence: {randomHero2.powerstats.intelligence}</p>
             <p>Strength: {randomHero2.powerstats.strength}</p>
             <p>Speed: {randomHero2.powerstats.speed}</p>

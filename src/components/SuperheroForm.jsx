@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Card from './Card.styles';
-import Button from './Button.styles';
+import Card from './Styles/Card.styles';
+import Button from './Styles/Button.styles';
 
 function SuperheroForm(props) {
 const [newSuperhero, setNewSuperhero] = useState({
