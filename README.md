@@ -23,3 +23,5 @@ Sum up the value to compare powerstats:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 https://www.tutorialspoint.com/java/number_parseint.htm
+https://dev.to/stackfindover/10-css-glowing-text-effect-stackfindover-402b
+https://codepen.io/team/css-tricks
