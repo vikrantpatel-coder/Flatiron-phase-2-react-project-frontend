@@ -14,12 +14,17 @@ const RandomSuperhero = ({ superheroes }) => {
     generateRandomSuperheroes();
   }, [superheroes]);
 
+
+  //create random number from its starting point to the length of an array
   const generateRandomSuperheroes = () => {
     const randomIndex1 = Math.floor(Math.random() * superheroes.length);
     const randomIndex2 = Math.floor(Math.random() * superheroes.length);
 
-    const randomSuperhero1 = superheroes[randomIndex1];
-    const randomSuperhero2 = superheroes[randomIndex2];
+
+   
+
+    const randomSuperhero1 = superheroes[randomIndex1];//holding the value of random hero1
+    const randomSuperhero2 = superheroes[randomIndex2];//holding the value of random hero2
 
     setRandomHero1(randomSuperhero1);
     setRandomHero2(randomSuperhero2);
@@ -69,7 +74,7 @@ const RandomSuperhero = ({ superheroes }) => {
         )}
         
       </div>
-      <Button onClick={generateRandomSuperheroes}>Let The War Begin..!</Button>
+      <Button onClick={generateRandomSuperheroes}>Let The Game Begin..!</Button>
       <ComparePowerstats randomHero1={randomHero1} randomHero2={randomHero2} />
       </div>
     

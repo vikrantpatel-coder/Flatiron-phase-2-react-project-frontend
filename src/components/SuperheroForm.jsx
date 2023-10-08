@@ -6,6 +6,8 @@ import FormLabel from './Styles/FormLabel.styles';
 import StyledInput from './Styles/Input.styles';
 
 function SuperheroForm(props) {
+
+//define state of the form
 const [newSuperhero, setNewSuperhero] = useState({
   name: "",
   intelligence: "",
@@ -17,7 +19,7 @@ const [newSuperhero, setNewSuperhero] = useState({
   images: "",
 });
 
-//Form submit handle
+//Form updates with the new superhero by defining spread operator
 const handleInputChange = (event) => {
   const { name, value } = event.target;
   setNewSuperhero({
@@ -27,7 +29,7 @@ const handleInputChange = (event) => {
 };
 
 
-
+//form submittion request when user will click the button
 const handleSubmit = (event) => {
   event.preventDefault();
   fetch('http://localhost:3000/superheroes', {
@@ -40,6 +42,7 @@ const handleSubmit = (event) => {
     .then((response) => response.json())
     .then((data) => {
      
+      //reset the form with empty values
       props.OnSuperheroSubmit(newSuperhero)
      
       setNewSuperhero({

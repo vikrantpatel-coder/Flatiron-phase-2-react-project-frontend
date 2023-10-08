@@ -17,7 +17,7 @@ const ComparePowerstats = ({ randomHero1, randomHero2 }) => {
 
     
     
-    //decision whether to declare win or tie
+    //expression of decision whether to declare win or tie
     if (totalDifference1 > totalDifference2) {
       return `${randomHero1.name} WINS!`;
     } else if (totalDifference2 > totalDifference1) {
