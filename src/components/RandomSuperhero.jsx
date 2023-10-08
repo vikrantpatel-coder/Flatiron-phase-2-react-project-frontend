@@ -3,6 +3,11 @@ import ComparePowerstats from "./ComparePowerstats";
 import Button from "./Styles/Button.styles"
 import Card from "./Styles/Card.styles";
 import StyledImage from "./Styles/Image.styles";
+import H3 from "./Styles/SuperheroTilte.style";
+
+
+
+
 
 const RandomSuperhero = ({ superheroes }) => {
   const [randomHero1, setRandomHero1] = useState(null);
@@ -27,9 +32,9 @@ const RandomSuperhero = ({ superheroes }) => {
   
   return (
     
-    <div>
-      <h3>SUPERHERO 1</h3>
-      <div>
+       <div>
+      <H3>SUPERHERO 1</H3>
+      
 
         {randomHero1 ? (
           <div>
@@ -47,9 +52,7 @@ const RandomSuperhero = ({ superheroes }) => {
         ) : (
           <p>Loading Superhero 1...</p>
         )}
-      </div>
-
-      <h3>SUPERHERO 2</h3>
+      <H3>SUPERHERO 2</H3>
       <div>
         {randomHero2 ? (
           <div>
@@ -72,8 +75,8 @@ const RandomSuperhero = ({ superheroes }) => {
       </div>
       <Button onClick={generateRandomSuperheroes}>Let The War Begin..!</Button>
       <ComparePowerstats randomHero1={randomHero1} randomHero2={randomHero2} />
-      
-    </div>
+      </div>
+    
   );
 };
 

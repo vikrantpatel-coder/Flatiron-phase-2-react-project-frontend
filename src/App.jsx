@@ -6,11 +6,16 @@ import SuperheroForm from './components/SuperheroForm';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import About from './components/About';
+import styled from 'styled-components';
 
-
-
-
-
+const StyledBackground = styled.body`
+  background-image: url('https://www.onlygfx.com/wp-content/uploads/2020/07/comic-vs-versus-1.png');
+  background-size: cover; 
+  background-position: center; 
+  width: auto; 
+  height: auto; 
+ 
+`;
 
 function App() {
 
@@ -41,7 +46,7 @@ function App() {
 
   return (
 
-    
+   <StyledBackground>
     <Router>
       <div className="App">
       <Navbar  />
@@ -53,7 +58,7 @@ function App() {
       </Routes>
       </div>
       </Router>
-    
+      </StyledBackground>
   );
 }
 

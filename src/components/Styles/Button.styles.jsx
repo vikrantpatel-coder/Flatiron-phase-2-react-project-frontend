@@ -1,14 +1,32 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid #BF4F74;
-  color: #BF4F74;
-  margin: 0 1em;
-  padding: 0.25em 1em;
+
+display: inline-block;
+outline: 0;
+border:0;
+cursor: pointer;
+text-decoration: none;
+position: relative;
+color: #000;
+background: #fff;
+line-height: 30px;
+border-radius: 40px;
+padding: 20px;
+font-size: 30px;
+font-weight: 600;
+box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+transition: all 0.2s;
+:hover{
+    box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transform: scale(1.01);
+}
+
 `
   
 
   export default Button;
 
+
+  
+  

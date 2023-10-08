@@ -1,4 +1,6 @@
 import React from "react";
+import Div from "./Styles/WinnerText.styles";
+
 
 const ComparePowerstats = ({ randomHero1, randomHero2 }) => {
   const comparePowerstats = () => {
@@ -13,18 +15,18 @@ const ComparePowerstats = ({ randomHero1, randomHero2 }) => {
     const totalDifference2 = Object.values(stats2).reduce((sum, value) => sum + parseInt(value), 0);
 
     if (totalDifference1 > totalDifference2) {
-      return `WINNER! : ${randomHero1.name}`;
+      return `${randomHero1.name} WINS!`;
     } else if (totalDifference2 > totalDifference1) {
-      return `WINNER! : ${randomHero2.name}`;
+      return `${randomHero2.name} WINS!`;
     } else {
       return "It's a tie!";
     }
   };
 
   return (
-    <div>
+    <Div>
       <div>{comparePowerstats()}</div>
-    </div>
+    </Div>
   );
 };
 

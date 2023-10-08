@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Card from './Styles/Card.styles';
 import Button from './Styles/Button.styles';
+import FormContainer from './Styles/FormContainer.styles';
+import FormLabel from './Styles/FormLabel.styles';
+import StyledInput from './Styles/Input.styles';
 
 function SuperheroForm(props) {
 const [newSuperhero, setNewSuperhero] = useState({
@@ -48,7 +51,7 @@ const handleSubmit = (event) => {
       });
     })
     .catch((error) => {
-      console.error('Error creating superhero:', error);
+      console.error('error', error);
     });
 };
 
@@ -57,81 +60,97 @@ return (
     <Card>
   <h2>Request Your Superhero Below :</h2>
        
-<form onSubmit={handleSubmit}>
-  <label>
+<FormContainer onSubmit={handleSubmit}>
+  
+  <FormLabel>
+  
     Name:
-    <input
+    <StyledInput
       type="text"
       name="name"
       value={newSuperhero.name}
       onChange={handleInputChange}
+    
     />
-  </label>
-  <label>
+    
+  </FormLabel>
+
+  <FormLabel>
   Intelligence:
-    <input
+    <StyledInput
       type="text"
       intelligence="intelligence"
       value={newSuperhero.intelligence}
       onChange={handleInputChange}
     />
-  </label>
-  <label>
+  </FormLabel>
+
+  <FormLabel>
   Strength:
-    <input
+    <StyledInput
       type="text"
       strength="strength"
       value={newSuperhero.strength}
       onChange={handleInputChange}
     />
-  </label>
-  <label>
+  </FormLabel>
+
+  <FormLabel>
   Speed:
-    <input
+    <StyledInput
       type="text"
       speed="speed"
       value={newSuperhero.speed}
       onChange={handleInputChange}
     />
-  </label>
-  <label>
+  </FormLabel>
+
+  <FormLabel>
   Durability:
-    <input
+    <StyledInput
       type="text"
       durability="durability"
       value={newSuperhero.durability}
       onChange={handleInputChange}
     />
-  </label>
-  <label>
+  </FormLabel>
+
+
+  <FormLabel>
   Power:
-    <input
+    <StyledInput
       type="text"
       power="power"
       value={newSuperhero.power}
       onChange={handleInputChange}
     />
-  </label>
-  <label>
+  </FormLabel>
+
+
+  <FormLabel>
   combat:
-    <input
+    <StyledInput
       type="text"
       combat="combat"
       value={newSuperhero.combat}
       onChange={handleInputChange}
     />
-  </label>
-  <label>
+  </FormLabel>
+
+
+  <FormLabel>
   Image Link:
-    <input
+    <StyledInput
       type="text"
       combat="image"
       value={newSuperhero.images.md}
       onChange={handleInputChange}
     />
-  </label>
+  </FormLabel>
+
+
   <Button type="submit">Create Superhero</Button>
-</form>
+</FormContainer>
 </Card>
 </div>
 
