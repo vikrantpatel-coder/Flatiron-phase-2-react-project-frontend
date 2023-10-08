@@ -5,10 +5,6 @@ import Card from "./Styles/Card.styles";
 import StyledImage from "./Styles/Image.styles";
 import H3 from "./Styles/SuperheroTilte.style";
 
-
-
-
-
 const RandomSuperhero = ({ superheroes }) => {
   const [randomHero1, setRandomHero1] = useState(null);
   const [randomHero2, setRandomHero2] = useState(null);
