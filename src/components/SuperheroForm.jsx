@@ -17,6 +17,7 @@ const [newSuperhero, setNewSuperhero] = useState({
   images: "",
 });
 
+//Form submit handle
 const handleInputChange = (event) => {
   const { name, value } = event.target;
   setNewSuperhero({
@@ -24,6 +25,8 @@ const handleInputChange = (event) => {
     [name]: value,
   });
 };
+
+
 
 const handleSubmit = (event) => {
   event.preventDefault();
