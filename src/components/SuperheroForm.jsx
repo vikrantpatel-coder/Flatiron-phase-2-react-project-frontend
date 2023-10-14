@@ -85,7 +85,7 @@ return (
   Intelligence:
     <StyledInput
       type="text"
-      intelligence="intelligence"
+      name="intelligence"
       value={newSuperhero.intelligence}
       onChange={handleInputChange}
     />
@@ -95,7 +95,7 @@ return (
   Strength:
     <StyledInput
       type="text"
-      strength="strength"
+      name="strength"
       value={newSuperhero.strength}
       onChange={handleInputChange}
     />
@@ -105,7 +105,7 @@ return (
   Speed:
     <StyledInput
       type="text"
-      speed="speed"
+      name="speed"
       value={newSuperhero.speed}
       onChange={handleInputChange}
     />
@@ -115,7 +115,7 @@ return (
   Durability:
     <StyledInput
       type="text"
-      durability="durability"
+      name="durability"
       value={newSuperhero.durability}
       onChange={handleInputChange}
     />
@@ -126,7 +126,7 @@ return (
   Power:
     <StyledInput
       type="text"
-      power="power"
+      name="power"
       value={newSuperhero.power}
       onChange={handleInputChange}
     />
@@ -137,7 +137,7 @@ return (
   combat:
     <StyledInput
       type="text"
-      combat="combat"
+      name="combat"
       value={newSuperhero.combat}
       onChange={handleInputChange}
     />
@@ -148,7 +148,7 @@ return (
   Image Link:
     <StyledInput
       type="text"
-      combat="image"
+      name="image"
       value={newSuperhero.images.md}
       onChange={handleInputChange}
     />
