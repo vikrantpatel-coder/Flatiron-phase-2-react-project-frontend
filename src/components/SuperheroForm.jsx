@@ -9,6 +9,7 @@ function SuperheroForm(props) {
 
 //define state of the form
 const [newSuperhero, setNewSuperhero] = useState({
+  
   name: "",
   intelligence: "",
   strength: "",
@@ -46,6 +47,7 @@ const handleSubmit = (event) => {
       props.OnSuperheroSubmit(newSuperhero)
      
       setNewSuperhero({
+        
         name: "",
         intelligence: "",
         strength: "",

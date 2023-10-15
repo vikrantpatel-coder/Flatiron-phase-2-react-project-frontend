@@ -4,8 +4,8 @@ import Button from "./Styles/Button.styles"
 import Card from "./Styles/Card.styles";
 import StyledImage from "./Styles/Image.styles";
 import H3 from "./Styles/SuperheroTilte.style";
-// import Div1 from "./Styles/WinnerText.styles";
-// import Div2 from "./Styles/Div2.styles";
+
+
 
 const RandomSuperhero = ({ superheroes }) => {
   const [randomHero1, setRandomHero1] = useState(null);
@@ -31,56 +31,59 @@ const RandomSuperhero = ({ superheroes }) => {
 
   
   return (
-    
-      
-
-        <div>
+    <div>
+    <div style={{ display: "flex", justifyContent: "space-between" }}>
+       
+        <div style={{ flex: 1 }}>
       <H3>SUPERHERO 1</H3>
-      
-
-        {randomHero1 ? (
-         
-         <div>
-            <Card>
-            <h4>{randomHero1.name}</h4>
-            <StyledImage src={randomHero1.images.md} alt={randomHero1.name} />
-            {Object.keys(randomHero1.powerstats).map((stat)=> (
-              <p key = {stat}>
-                {stat} : {randomHero1.powerstats[stat]}
+      {randomHero1 ? (
+        <Card >
+          <h4>{randomHero1.name}</h4>
+          <StyledImage src={randomHero1.images.md} alt={randomHero1.name} />
+          <div className="superhero-card">
+            {Object.keys(randomHero1.powerstats).map((stat) => (
+              <p key={stat}>
+                {stat}: {randomHero1.powerstats[stat]}
               </p>
             ))}
-
-            </Card>
-            </div>
-        ) : (
-          <p>Loading Superhero 1...</p>
-        )}
-        
-        <div>
-      <H3>SUPERHERO 2</H3>
-      
-        {randomHero2 ? (
-          
-            <Card>
-
-            <h4>{randomHero2.name}</h4>
-            <StyledImage src={randomHero2.images.md} alt={randomHero2.name} />
-            {Object.keys(randomHero1.powerstats).map((stat)=>(
-              <p key = {stat}>
-                {stat} : {randomHero2.powerstats[stat]}
-              </p>
-            ))}
-            </Card>
-          
-        ) : (
-          <p>Loading Superhero 2...</p>
-        )}
         </div>
-    
+        </Card>
+      ) : (
+        <p>Loading Superhero 1...</p>
+      )}
+</div>
+
+
+
+
+<div style={{ flex: 1 }}>
+      <H3>SUPERHERO 2</H3>
+      {randomHero2 ? (
+        <Card >
+          <h4>{randomHero2.name}</h4>
+          <StyledImage src={randomHero2.images.md} alt={randomHero2.name} />
+          <div className="superhero-card">
+            {Object.keys(randomHero2.powerstats).map((stat) => (
+              <p key={stat}>
+                {stat}: {randomHero2.powerstats[stat]}
+              </p>
+            ))}
+          
+</div>
+        </Card>
+      ) : (
+        <p>Loading Superhero 2...</p>
+      )}
+</div>
+</div>
+<div >
       <Button onClick={generateRandomSuperheroes}>Let The Game Begin..!</Button>
+      </div>
+      <div>
       <ComparePowerstats randomHero1={randomHero1} randomHero2={randomHero2} />
-      
+   
+   </div>
   </div>
- );
- };
+  );
+};
 export default RandomSuperhero;
