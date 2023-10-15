@@ -7,7 +7,10 @@ border-radius: 25px;
 padding: auto;
 margin: 100px;
 backdrop-filter: blur(10px);
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+
+
 `;
 
 export default Card;

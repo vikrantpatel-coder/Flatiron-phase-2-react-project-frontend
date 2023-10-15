@@ -7,8 +7,8 @@ const Header = () => {
          <div className="header">
             <h1>SuperHERO BattleGround</h1>
          </div>
+         </>
 
-</>
     )
 } 
 
