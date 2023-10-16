@@ -6,9 +6,9 @@ import StyledImage from "./Styles/Image.styles";
 import H3 from "./Styles/SuperheroTilte.style";
 
 
-
 const RandomSuperhero = ({ superheroes }) => {
-  const [randomHero1, setRandomHero1] = useState(null);
+  const [randomHero1, setRandomHero1] = useState(null)
+  
   const [randomHero2, setRandomHero2] = useState(null);
 
   useEffect(() => {
@@ -28,7 +28,6 @@ const RandomSuperhero = ({ superheroes }) => {
     setRandomHero1(randomSuperhero1);
     setRandomHero2(randomSuperhero2);
   };
-
   
   return (
     <div>
@@ -39,21 +38,18 @@ const RandomSuperhero = ({ superheroes }) => {
       {randomHero1 ? (
         <Card >
           <h4>{randomHero1.name}</h4>
-          <StyledImage src={randomHero1.images.md} alt={randomHero1.name} />
-          <div className="superhero-card">
-            {Object.keys(randomHero1.powerstats).map((stat) => (
-              <p key={stat}>
-                {stat}: {randomHero1.powerstats[stat]}
-              </p>
-            ))}
-        </div>
+          <StyledImage src={randomHero1.images?.md} alt={randomHero1.name} />
+          <p>Intelligence: {randomHero1.powerstats.intelligence}</p>
+          <p>Strength: {randomHero1.powerstats.strength}</p>
+          <p>Speed: {randomHero1.powerstats.speed}</p>
+          <p>Durability: {randomHero1.powerstats.durability}</p>
+          <p>Power: {randomHero1.powerstats.power}</p>
+          <p>Combat: {randomHero1.powerstats.combat}</p>
         </Card>
-      ) : (
+      ): (
         <p>Loading Superhero 1...</p>
       )}
 </div>
-
-
 
 
 <div style={{ flex: 1 }}>
@@ -61,17 +57,15 @@ const RandomSuperhero = ({ superheroes }) => {
       {randomHero2 ? (
         <Card >
           <h4>{randomHero2.name}</h4>
-          <StyledImage src={randomHero2.images.md} alt={randomHero2.name} />
-          <div className="superhero-card">
-            {Object.keys(randomHero2.powerstats).map((stat) => (
-              <p key={stat}>
-                {stat}: {randomHero2.powerstats[stat]}
-              </p>
-            ))}
-          
-</div>
+          <StyledImage src={randomHero2.images?.md} alt={randomHero2.name} />
+          <p>Intelligence: {randomHero2.powerstats.intelligence}</p>
+          <p>Strength: {randomHero2.powerstats.strength}</p>
+          <p>Speed: {randomHero2.powerstats.speed}</p>
+          <p>Durability: {randomHero2.powerstats.durability}</p>
+          <p>Power: {randomHero2.powerstats.power}</p>
+          <p>Combat: {randomHero2.powerstats.combat}</p>
         </Card>
-      ) : (
+       ):(
         <p>Loading Superhero 2...</p>
       )}
 </div>
@@ -80,10 +74,15 @@ const RandomSuperhero = ({ superheroes }) => {
       <Button onClick={generateRandomSuperheroes}>Let The Game Begin..!</Button>
       </div>
       <div>
-      <ComparePowerstats randomHero1={randomHero1} randomHero2={randomHero2} />
-   
+      
+          <ComparePowerstats
+            randomHero1={randomHero1}
+            randomHero2={randomHero2}
+          />
+        
    </div>
   </div>
   );
 };
 export default RandomSuperhero;
+

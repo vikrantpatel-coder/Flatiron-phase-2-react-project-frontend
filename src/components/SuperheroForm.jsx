@@ -9,16 +9,20 @@ function SuperheroForm(props) {
 
 //define state of the form
 const [newSuperhero, setNewSuperhero] = useState({
-  
-  name: "",
-  intelligence: "",
-  strength: "",
-  speed: "",
-  durability: "",
-  power: "",
-  combat: "",
-  images: "",
+id:"",
+name: "",
+intelligence: "",
+strength: "",
+speed: "",
+durability: "",
+power: "",
+combat: "",
+images: {
+  md: ""
+}
+
 });
+
 
 //Form updates with the new superhero by defining spread operator
 const handleInputChange = (event) => {
@@ -33,6 +37,8 @@ const handleInputChange = (event) => {
 //form submittion request when user will click the button
 const handleSubmit = (event) => {
   event.preventDefault();
+
+
   fetch('http://localhost:3000/superheroes', {
     method: 'POST',
     headers: {
@@ -44,10 +50,11 @@ const handleSubmit = (event) => {
     .then((data) => {
      
       //reset the form with empty values
-      props.OnSuperheroSubmit(newSuperhero)
+      props.OnSuperheroSubmit(data)
      
       setNewSuperhero({
-        
+
+        id:"",
         name: "",
         intelligence: "",
         strength: "",
@@ -55,7 +62,11 @@ const handleSubmit = (event) => {
         durability: "",
         power: "",
         combat: "",
-        images: "",
+        images: {
+            md: ""
+    }
+
+       
       });
     })
     .catch((error) => {
@@ -70,7 +81,7 @@ return (
        
 <FormContainer onSubmit={handleSubmit}>
   
-  <FormLabel>
+  <FormLabel style = {{color: 'black'}}>
   
     Name:
     <StyledInput
@@ -83,7 +94,7 @@ return (
     
   </FormLabel>
 
-  <FormLabel>
+  <FormLabel style = {{color: 'black'}}>
   Intelligence:
     <StyledInput
       type="text"
@@ -93,7 +104,7 @@ return (
     />
   </FormLabel>
 
-  <FormLabel>
+  <FormLabel style = {{color: 'black'}}>
   Strength:
     <StyledInput
       type="text"
@@ -103,7 +114,7 @@ return (
     />
   </FormLabel>
 
-  <FormLabel>
+  <FormLabel style = {{color: 'black'}}>
   Speed:
     <StyledInput
       type="text"
@@ -111,9 +122,9 @@ return (
       value={newSuperhero.speed}
       onChange={handleInputChange}
     />
-  </FormLabel>
+  </FormLabel >
 
-  <FormLabel>
+  <FormLabel style = {{color: 'black'}}>
   Durability:
     <StyledInput
       type="text"
@@ -124,7 +135,7 @@ return (
   </FormLabel>
 
 
-  <FormLabel>
+  <FormLabel style = {{color: 'black'}}>
   Power:
     <StyledInput
       type="text"
@@ -135,7 +146,7 @@ return (
   </FormLabel>
 
 
-  <FormLabel>
+  <FormLabel style = {{color: 'black'}}>
   combat:
     <StyledInput
       type="text"
@@ -146,7 +157,7 @@ return (
   </FormLabel>
 
 
-  <FormLabel>
+  <FormLabel style = {{color: 'black'}}>
   Image Link:
     <StyledInput
       type="text"
