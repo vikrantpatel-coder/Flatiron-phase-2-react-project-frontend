@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import About from './components/About';
 import Div1 from './components/Styles/Background.styles';
-
+import createSuperheroesJSON from './hero_db'; 
 
 function App() {
 
@@ -20,12 +20,12 @@ function App() {
       id: superhero.id,
       name: superhero.name,
       powerstats: { 
-    intelligence: superhero.powerstats.intelligence,
-    strength: superhero.powerstats.strength,
-    speed: superhero.powerstats.speed,
-    durability: superhero.powerstats.durability,
-    power: superhero.powerstats.power,
-    combat: superhero.powerstats.combat,
+    intelligence: superhero.intelligence,
+    strength: superhero.strength,
+    speed: superhero.speed,
+    durability: superhero.durability,
+    power: superhero.power,
+    combat: superhero.combat,
       },
     images: {
       md: superhero.images.md
@@ -41,7 +41,10 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         const flattenedData = data.map(mapDataToNew);
-      setSuperheroes(flattenedData);
+
+        const jsonSuperheroes = createSuperheroesJSON(flattenedData);
+
+      setSuperheroes(jsonSuperheroes);
       setFilteredSuperheroes(flattenedData);
     })
        
@@ -50,13 +53,32 @@ function App() {
       });
   }, []);
 
-//adds superhero to the existing array of superheroes
   const addSuperhero = (newSuperhero) => {
-    setSuperheroes([...superheroes, newSuperhero])
+    
+    const formattedNewSuperhero = {
+      id: newSuperhero.id,
+      name: newSuperhero.name,
+      powerstats: {
+        intelligence: newSuperhero.intelligence,
+        strength: newSuperhero.strength,
+        speed: newSuperhero.speed,
+        durability: newSuperhero.durability,
+        power: newSuperhero.power,
+        combat: newSuperhero.combat,
+      },
+      images: {
+        md: newSuperhero.images.md,
+      },
+    };
+
+//adds superhero to the existing array of superheroes
+  
+    setSuperheroes([...superheroes, formattedNewSuperhero])
 
     
-  }
   
+  
+}
 
   return (
 <>
