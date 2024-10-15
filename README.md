@@ -49,7 +49,7 @@ Currently, two official plugins are available:
 
 ## About My App:
 
-My childhood memories inspire this project. Back then we did not have much access to
+This project is inspired by my childhood memories. Back then we did not have much access to
 technology like the current generation. We would play many board games and card games.
 Superhero, pokémon, and wrestling card games were some of my favorites. This project reflects the same idea of
 playing cards where you shuffle, deploy, and compare the power and most powerful character wins.
